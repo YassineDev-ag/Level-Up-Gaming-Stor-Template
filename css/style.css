@@ -131,7 +131,7 @@
     @media (max-width: 768px) {
       #dropdown-menu {
          position: absolute;
-         z-index: 11;
+         z-index: 12;
       }
     }
     
