@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <title>LevelUpStore - shopping Gaming</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.livrasion.com/livrasion.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="icon/fi-4.png" type="image/x-icon">
+</head>
+<body class="bg-black text-white">
+  <!-- Banner Section -->
+  <div class="banner flex flex-col items-center md:flex-row md:justify-between col-span-12">
+    <!-- Left Section -->
+    <div class="left text-center md:text-left col-span-4">
+      <span>BLACK FRIDAY</span>
+    </div>
+
+    <!-- Center Section (Animated Text) -->
+    <div class="center text-center col-span-4">
+      <span>Crazy Offers, Every Friday!</span>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right text-center md:text-right col-span-4">
+      <div class="date-box">
+        <span>NOV</span>
+        <span>8</span>
+        <span>15</span>
+      </div>
+      <span>BLACK FRIDAY</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-black border-b-2 border-green-500">
+    <div class="max-w-screen-xl mx-auto grid grid-cols-12 items-center px-4 py-2">
+      <!-- Logo (3 columns) -->
+      <div class="col-span-3 flex items-center space-x-4 ">
+        <img src="icon/fi-4.png" alt="Logo" class="h-8 w-auto">
+        <span class="font-bold text-lg hidden md:flex " style="font-family: 'Anton', sans-serif;  ">Level<span style="color: green;">Up</span>store</span>
+      </div>
+      
+      <!-- Search Bar (6 columns) --> <!-- Changed from 8 to 6 columns -->
+      <div class="col-span-6 flex flex-grow justify-center mr-5 "> 
+        <div class="relative w-full max-w-lg">
+          <input type="text" placeholder="Search..." class="w-full bg-gray-800 text-white p-2 rounded-lg pl-10 focus:outline-none focus:ring-2 focus:ring-green-500 ">
+          <!-- Search Icon (Updated) -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-2 h-6 w-6 text-green-400 hover:text-green-500 transition duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 14a4 4 0 100-8 4 4 0 000 8zm0 0l3 3m-3-3l-3-3" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Icons and Hamburger Menu (3 columns) --> <!-- Changed from 6 to 3 columns -->
+      <div class="col-span-3 flex items-center space-x-4 justify-end"> 
+        <!-- Existing Account Icon -->
+        <a href="pages/shop.html">
+          <button class="text-green-400 hover:text-green-500" aria-label="Account">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 14c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-3.31 0-6 1.69-6 4v1h12v-1c0-2.31-2.69-4-6-4z" />
+            </svg>
+          </button>
+        </a>
+        <!-- Existing Cart Icon -->
+        <button class="text-green-400 hover:text-green-500" aria-label="Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l1 9h12l1-9h2M3 3l1 9m0 0h12m-12 0l1 9h12l1-9m-12 0h12" />
+          </svg>
+        </button>
+
+     
+        <!-- Dropdown Menu (Updated for mobile) -->
+        <div class="relative md:static">
+          <button id="dropdown-toggle" class="text-green-400 hover:text-green-500" aria-label="Dropdown Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+
+          <!-- Dropdown Content (Updated to show above image on mobile) -->
+          <div id="dropdown-menu" class="absolute right-0 mt-2 w-48 bg-black text-green-400 rounded-lg shadow-lg hidden md:top-10 md:right-0">
+            <ul class="py-2">
+              <li class="px-4 py-2 hover:bg-gray-200">PC Gamer</li>
+              <li class="px-4 py-2 hover:bg-gray-200">PC par Jeux</li>
+              <li class="px-4 py-2 hover:bg-gray-200">PC par Secteur</li>
+              <li class="px-4 py-2 hover:bg-gray-200">Setup Complet</li>
+              <li class="px-4 py-2 hover:bg-gray-200">PC Portables</li>
+            </ul>
+          </div>
+        </div>
+
+       
+
+        <!-- Dropdown Menu (Updated) -->
+        
+      </div>
+    </div>
+  </nav>
+   
+  
+
+  <!-- Header Section -->
+  <header class="py-8 px-4">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+      <!--  Left Column: Text -->
+          <!-- Right Column: Image -->
+      <div>
+        <div class="relative group">
+          <img 
+            src="image/black-friday.jpeg" 
+            alt="Gaming setup for Black Friday"
+            class="rounded-2xl shadow-lg transform transition-transform duration-500 group-hover:scale-105 "
+          />
+          <!-- Overlay Box -->
+          <div class="absolute inset-0 bg-black bg-opacity-30 rounded-lg group-hover:opacity-0 transition-opacity duration-500"></div>
+        </div>
+      </div>
+      <div>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-bounce " style="font-family:  'Anton', sans-serif ;" >Black <span style="color: green;" >Friday</span></h1>
+        <p class="text-xl md:text-2xl mb-6" style="font-family: 'Arial', sans-serif;">
+          Experience the ultimate savings this Black Friday with exclusive deals on top gaming gear!
+        </p>
+        <button class="bg-green-500 text-black px-6 py-3 rounded-md shadow-lg hover:bg-green-400 transition duration-300 flex items-center" style="font-family: 'Anton', sans-serif;">
+          <!-- Icon for the button -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+          </svg>
+          Go to Black Friday
+        </button>
+      </div>
+
+    
+    </div>
+  </header>
+
+  <div class="bg-black text-white py-10">
+    <div class="text-center mb-10">
+      <h1 class="text-4xl md:text-6xl font-bold mb-2 animate-bounce" style="font-family: 'Anton', sans-serif;">
+        Meilleurs <span class="text-green-500">PC Gamer Maroc</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300">Les PC Gamer les plus populaires</p>
+    </div>
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+      <!-- Card Template -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">NOUVEAU</span>
+        <img src="image/pngegg.png" alt="PC Gamer 1" class="rounded-lg mb-4 size-52">
+        <div>
+          <h3 class="text-xl font-semibold">Ultra Pc R7 5800X3D | 32GB DDR4 | SSD 4TB | RTX 4060 TI</h3>
+          <p class="text-sm text-gray-400 mb-2">PC GAMER</p>
+          <p class="text-green-500 text-2xl font-bold">15,799.00 MAD</p>
+        </div>
+        <!-- Hover Add to Cart -->
+        <div class="relative group">
+          <!-- Bottom Section Trigger -->
+          <div class="absolute inset-x-0 bottom-0 bg-red-500 hidden group-hover:flex justify-center items-center py-4 rounded-b-lg transition duration-300">
+            <button class="text-white px-4 py-2 flex items-center gap-2">
+              <!-- Cart Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l1.35-6H5.4M6 16h12m-7 0v6m4-6v6M6 6h15"></path>
+              </svg>
+              Ajouter au panier
+            </button>
+          </div>
+          <!-- Spacer for trigger -->
+          <div class="py-2 text-gray-400 text-sm text-center group-hover:bg-gray-700 rounded-b-lg">Passez pour voir les options</div>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">NOUVEAU</span>
+        <img src="image/pngegg (1).png" alt="PC Gamer 2" class="rounded-lg mb-4 size-52">
+        <div>
+          <h3 class="text-xl font-semibold">Ultra Pc R7 5800X3D | 32GB DDR4 | SSD 4TB NVME | RX 6900XT 16G</h3>
+          <p class="text-sm text-gray-400 mb-2">PC GAMER</p>
+          <p class="text-green-500 text-2xl font-bold">17,750.00 MAD</p>
+        </div>
+        <!-- Hover Add to Cart -->
+        <div class="relative group">
+          <div class="absolute inset-x-0 bottom-0 bg-red-500 hidden group-hover:flex justify-center items-center py-4 rounded-b-lg transition duration-300">
+            <button class="text-white px-4 py-2 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l1.35-6H5.4M6 16h12m-7 0v6m4-6v6M6 6h15"></path>
+              </svg>
+              Ajouter au panier
+            </button>
+          </div>
+          <div class="py-2 text-gray-400 text-sm text-center group-hover:bg-gray-700 rounded-b-lg">Passez pour voir les options</div>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">PROMO !</span>
+        <img src="image/pngegg (2).png" alt="PC Gamer 3" class="rounded-lg mb-4 size-52">
+        <div>
+          <h3 class="text-xl font-semibold">PC PRO 2024 R7 9700X | 32GB DDR5 | SSD 2TB | RTX 4080 SUPER</h3>
+          <p class="text-sm text-gray-400 mb-2">PC GAMER</p>
+          <p class="text-green-500 text-2xl font-bold">26,900.00 MAD</p>
+        </div>
+        <!-- Hover Add to Cart -->
+        <div class="relative group">
+          <div class="absolute inset-x-0 bottom-0 bg-red-500 hidden group-hover:flex justify-center items-center py-4 rounded-b-lg transition duration-300">
+            <button class="text-white px-4 py-2 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l1.35-6H5.4M6 16h12m-7 0v6m4-6v6M6 6h15"></path>
+              </svg>
+              Ajouter au panier
+            </button>
+          </div>
+          <div class="py-2 text-gray-400 text-sm text-center group-hover:bg-gray-700 rounded-b-lg">Passez pour voir les options</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-black text-white py-10">
+   
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+      <!-- Card Template -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">NOUVEAU</span>
+        <img src="image/pngegg.png" alt="PC Gamer 1" class="rounded-lg mb-4 size-52">
+        <div>
+          <h3 class="text-xl font-semibold">Ultra Pc R7 5800X3D | 32GB DDR4 | SSD 4TB | RTX 4060 TI</h3>
+          <p class="text-sm text-gray-400 mb-2">PC GAMER</p>
+          <p class="text-green-500 text-2xl font-bold">15,799.00 MAD</p>
+        </div>
+        <!-- Hover Add to Cart -->
+        <div class="relative group">
+          <!-- Bottom Section Trigger -->
+          <div class="absolute inset-x-0 bottom-0 bg-red-500 hidden group-hover:flex justify-center items-center py-4 rounded-b-lg transition duration-300">
+            <button class="text-white px-4 py-2 flex items-center gap-2">
+              <!-- Cart Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l1.35-6H5.4M6 16h12m-7 0v6m4-6v6M6 6h15"></path>
+              </svg>
+              Ajouter au panier
+            </button>
+          </div>
+          <!-- Spacer for trigger -->
+          <div class="py-2 text-gray-400 text-sm text-center group-hover:bg-gray-700 rounded-b-lg">Passez pour voir les options</div>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">NOUVEAU</span>
+        <img src="image/pngegg (1).png" alt="PC Gamer 2" class="rounded-lg mb-4 size-52">
+        <div>
+          <h3 class="text-xl font-semibold">Ultra Pc R7 5800X3D | 32GB DDR4 | SSD 4TB NVME | RX 6900XT 16G</h3>
+          <p class="text-sm text-gray-400 mb-2">PC GAMER</p>
+          <p class="text-green-500 text-2xl font-bold">17,750.00 MAD</p>
+        </div>
+        <!-- Hover Add to Cart -->
+        <div class="relative group">
+          <div class="absolute inset-x-0 bottom-0 bg-red-500 hidden group-hover:flex justify-center items-center py-4 rounded-b-lg transition duration-300">
+            <button class="text-white px-4 py-2 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l1.35-6H5.4M6 16h12m-7 0v6m4-6v6M6 6h15"></path>
+              </svg>
+              Ajouter au panier
+            </button>
+          </div>
+          <div class="py-2 text-gray-400 text-sm text-center group-hover:bg-gray-700 rounded-b-lg">Passez pour voir les options</div>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">PROMO !</span>
+        <img src="image/pngegg (2).png" alt="PC Gamer 3" class="rounded-lg mb-4 size-52">
+        <div>
+          <h3 class="text-xl font-semibold">PC PRO 2024 R7 9700X | 32GB DDR5 | SSD 2TB | RTX 4080 SUPER</h3>
+          <p class="text-sm text-gray-400 mb-2">PC GAMER</p>
+          <p class="text-green-500 text-2xl font-bold">26,900.00 MAD</p>
+        </div>
+        <!-- Hover Add to Cart -->
+        <div class="relative group">
+          <div class="absolute inset-x-0 bottom-0 bg-red-500 hidden group-hover:flex justify-center items-center py-4 rounded-b-lg transition duration-300">
+            <button class="text-white px-4 py-2 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l1.35-6H5.4M6 16h12m-7 0v6m4-6v6M6 6h15"></path>
+              </svg>
+              Ajouter au panier
+            </button>
+          </div>
+          <div class="py-2 text-gray-400 text-sm text-center group-hover:bg-gray-700 rounded-b-lg">Passez pour voir les options</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="bg-black text-white py-10">
+   
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+      <!-- Card Template -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">NOUVEAU</span>
+        <img src="image/pngegg.png" alt="PC Gamer 1" class="rounded-lg mb-4 size-52">
+        <div>
+          <h3 class="text-xl font-semibold">Ultra Pc R7 5800X3D | 32GB DDR4 | SSD 4TB | RTX 4060 TI</h3>
+          <p class="text-sm text-gray-400 mb-2">PC GAMER</p>
+          <p class="text-green-500 text-2xl font-bold">15,799.00 MAD</p>
+        </div>
+        <!-- Hover Add to Cart -->
+        <div class="relative group">
+          <!-- Bottom Section Trigger -->
+          <div class="absolute inset-x-0 bottom-0 bg-red-500 hidden group-hover:flex justify-center items-center py-4 rounded-b-lg transition duration-300">
+            <button class="text-white px-4 py-2 flex items-center gap-2">
+              <!-- Cart Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l1.35-6H5.4M6 16h12m-7 0v6m4-6v6M6 6h15"></path>
+              </svg>
+              Ajouter au panier
+            </button>
+          </div>
+          <!-- Spacer for trigger -->
+          <div class="py-2 text-gray-400 text-sm text-center group-hover:bg-gray-700 rounded-b-lg">Passez pour voir les options</div>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">NOUVEAU</span>
+        <img src="image/pngegg (1).png" alt="PC Gamer 2" class="rounded-lg mb-4 size-52">
+        <div>
+          <h3 class="text-xl font-semibold">Ultra Pc R7 5800X3D | 32GB DDR4 | SSD 4TB NVME | RX 6900XT 16G</h3>
+          <p class="text-sm text-gray-400 mb-2">PC GAMER</p>
+          <p class="text-green-500 text-2xl font-bold">17,750.00 MAD</p>
+        </div>
+        <!-- Hover Add to Cart -->
+        <div class="relative group">
+          <div class="absolute inset-x-0 bottom-0 bg-red-500 hidden group-hover:flex justify-center items-center py-4 rounded-b-lg transition duration-300">
+            <button class="text-white px-4 py-2 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l1.35-6H5.4M6 16h12m-7 0v6m4-6v6M6 6h15"></path>
+              </svg>
+              Ajouter au panier
+            </button>
+          </div>
+          <div class="py-2 text-gray-400 text-sm text-center group-hover:bg-gray-700 rounded-b-lg">Passez pour voir les options</div>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">PROMO !</span>
+        <img src="image/pngegg (2).png" alt="PC Gamer 3" class="rounded-lg mb-4 size-52">
+        <div>
+          <h3 class="text-xl font-semibold">PC PRO 2024 R7 9700X | 32GB DDR5 | SSD 2TB | RTX 4080 SUPER</h3>
+          <p class="text-sm text-gray-400 mb-2">PC GAMER</p>
+          <p class="text-green-500 text-2xl font-bold">26,900.00 MAD</p>
+        </div>
+        <!-- Hover Add to Cart -->
+        <div class="relative group">
+          <div class="absolute inset-x-0 bottom-0 bg-red-500 hidden group-hover:flex justify-center items-center py-4 rounded-b-lg transition duration-300">
+            <button class="text-white px-4 py-2 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l1.35-6H5.4M6 16h12m-7 0v6m4-6v6M6 6h15"></path>
+              </svg>
+              Ajouter au panier
+            </button>
+          </div>
+          <div class="py-2 text-gray-400 text-sm text-center group-hover:bg-gray-700 rounded-b-lg">Passez pour voir les options</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto py-10"></div>
+  <h1 class="text-4xl md:text-6xl font-bold mb-2 animate-bounce text-center" style="font-family: 'Anton', sans-serif;">
+    ECRAN,<span class="text-green-500"> MONITEURS PC GAMER </span>
+   </h1>
+
+    <!-- Carousel Wrapper -->
+    <div class="overflow-hidden relative">
+      <!-- Carousel Content -->
+      <div class="flex gap-6 items-center animate-[slideRightToLeft_8s_linear_infinite]">
+        <!-- Card 2 -->
+        <div class="min-w-[300px] bg-gray-900 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+          <img src="image/pngegg (2).png" alt="Card 2 Image" class="mb-2 rounded-lg">
+          <h3 class="text-xl font-bold text-green-500 mb-2">RTX 4060 </h3>
+          <p class="text-gray-400">9500 DH</p>
+        </div><!-- Card 1 -->
+        
+        <!-- Card 2 -->
+        <div class="min-w-[300px] bg-gray-900 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+          <img src="image/pngegg (2).png" alt="Card 2 Image" class="mb-2 rounded-lg">
+          <h3 class="text-xl font-bold text-green-500 mb-2">RTX 4060 </h3>
+          <p class="text-gray-400">9500 DH</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="min-w-[300px] bg-gray-900 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+          <img src="image/pngegg (2).png" alt="Card 2 Image" class="mb-2 rounded-lg">
+          <h3 class="text-xl font-bold text-green-500 mb-2">RTX 4060 </h3>
+          <p class="text-gray-400">9500 DH</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="min-w-[300px] bg-gray-900 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+          <img src="image/pngegg (2).png" alt="Card 2 Image" class="mb-2 rounded-lg">
+          <h3 class="text-xl font-bold text-green-500 mb-2">RTX 4060 </h3>
+          <p class="text-gray-400">9500 DH</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="min-w-[300px] bg-gray-900 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+          <img src="image/pngegg (2).png" alt="Card 2 Image" class="mb-2 rounded-lg">
+          <h3 class="text-xl font-bold text-green-500 mb-2">RTX 4060 </h3>
+          <p class="text-gray-400">9500 DH</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="min-w-[300px] bg-gray-900 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+          <img src="image/pngegg (2).png" alt="Card 2 Image" class="mb-2 rounded-lg">
+          <h3 class="text-xl font-bold text-green-500 mb-2">RTX 4060 </h3>
+          <p class="text-gray-400">9500 DH</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ 
+  <div class="text-center mb-10 mt-5">
+    <h1 class="text-4xl md:text-6xl font-bold mb-2 animate-bounce" style="font-family: 'Anton', sans-serif;">
+     Magasine <span class="text-green-500">Localisation </span>
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-300">google maps</p>
+  </div>
+<!-- ... existing code ... -->
+<div style="width: 100%;" class="p-6 ">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d326601.4649935061!2d-84.51662801186525!3d33.7929299363561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f508466f2ec05b%3A0x3133373b10a74e47!2zQ29tdMOpIGRlIERlS2FsYiwgR8Opb3JnaWUsIMOJdGF0cy1Vbmlz!5e1!3m2!1sfr!2sma!4v1732387223154!5m2!1sfr!2sma" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<!-- ... existing code ... -->
+  
+  
+
+  <!-- New Service Bar Section -->
+  <section class="py-8 px-4 mt-5">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+      <!-- Livraison -->
+      <a href="pages/Form.html">
+        <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg transition-transform transform hover:scale-105">
+        <i class="fas fa-truck text-2xl text-green-400 mb-2"></i>
+        <h3 class="font-bold text-lg ">Livraison 24H/48h</h3>
+        <p class="text-center text-xs">Livraison à domicile </p>
+        <p class="text-center text-xs">partout au Maroc</p>
+
+      </div>
+      </a>
+
+      <!-- Paiement -->
+      <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg transition-transform transform hover:scale-105">
+        <i class="fas fa-credit-card text-2xl text-green-400 mb-2"></i>
+        <h3 class="font-bold text-lg">Paiement</h3>
+        <p class="text-center text-xs">Paiement à la livraison ou Virement BC</p>
+      </div>
+
+      <!-- Garantie -->
+      <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg transition-transform transform hover:scale-105">
+        <i class="fas fa-shield-alt text-2xl text-green-400 mb-2"></i>
+        <h3 class="font-bold text-lg">Garantie</h3>
+        <p class="text-center text-xs">Garantie 1 an pièces et main d'œuvre.</p>
+      </div>
+
+      <!-- Service Client -->
+      <a href="pages/Services.html">
+        <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg transition-transform transform hover:scale-105">
+        <i class="fas fa-headset text-2xl text-green-400 mb-2"></i>
+        <h3 class="font-bold text-lg">Service Client</h3>
+        <p class="text-center text-xs">Disponible du lundi au samedi du 10h à 19h</p>
+      </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- WhatsApp Floating Button (Added) -->
+  <div class="fixed bottom-4 right-4 z-50">
+    <a id="whatsapp-link" href="javascript:void(0);" aria-label="Contact on WhatsApp" class="flex items-center justify-center w-16 h-16 bg-green-500 rounded-full shadow-lg hover:scale-105 transition-transform duration-200">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-10 h-10">
+    </a>
+  </div>
+
+  <!-- Footer container -->
+<footer class="bg-black text-green-500 text-center lg:text-left">
+  <div class="flex items-center justify-center border-b-2 border-green-500 p-6 lg:justify-between">
+    <div class="me-12 hidden lg:block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Social network icons container -->
+    <div class="flex justify-center">
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 320 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4 ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 512 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 488 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+        </svg>
+      </a>
+      <a href="#!" class="[&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 496 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
+  <div class="mx-6 py-10 text-center md:text-left">
+    <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <!-- TW Elements section -->
+      <div class="">
+        <h6 class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+          <span class="me-3 [&>svg]:h-4 [&>svg]:w-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
+            </svg>
+          </span>
+          LevelUp-Store
+        </h6>
+        <p>
+          Here you can use rows and columns to organize your footer content. Explore the best gaming gear and accessories.
+        </p>
+      </div>
+      <!-- Products section -->
+      <div>
+        <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          Products
+        </h6>
+        <p class="mb-4 flex items-center">
+          <i class="fas fa-laptop text-green-500 mr-2"></i>
+          <a href="#!">Gaming Laptops</a>
+        </p>
+        <p class="mb-4 flex items-center">
+          <i class="fas fa-desktop text-green-500 mr-2"></i>
+          <a href="#!">Gaming Desktops</a>
+        </p>
+        <p class="mb-4 flex items-center">
+          <i class="fas fa-gamepad text-green-500 mr-2"></i>
+          <a href="#!">Accessories</a>
+        </p>
+        <p class="flex items-center">
+          <i class="fas fa-keyboard text-green-500 mr-2"></i>
+          <a href="#!">Peripherals</a>
+        </p>
+      </div>
+      <!-- Useful links section -->
+      <div>
+        <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          Useful links
+        </h6>
+        <p class="mb-4 flex items-center">
+          <i class="fas fa-tags text-green-500 mr-2"></i>
+          <a href="#!">Pricing</a>
+        </p>
+        <p class="mb-4 flex items-center">
+          <i class="fas fa-cog text-green-500 mr-2"></i>
+          <a href="#!">Settings</a>
+        </p>
+        <p class="mb-4 flex items-center">
+          <i class="fas fa-box text-green-500 mr-2"></i>
+          <a href="#!">Orders</a>
+        </p>
+        <p class="flex items-center">
+          <i class="fas fa-question-circle text-green-500 mr-2"></i>
+          <a href="#!">Help</a>
+        </p>
+      </div>
+      <!-- Contact section -->
+      <div>
+        <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          Contact
+        </h6>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <i class="fas fa-map-marker-alt text-green-500 mr-2"></i>
+          <span>New York, NY 10012, US</span>
+        </p>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <i class="fas fa-envelope text-green-500 mr-2"></i>
+          <span>info@example.com</span>
+        </p>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <i class="fas fa-phone text-green-500 mr-2"></i>
+          <span>+ 01 234 567 88</span>
+        </p>
+        <p class="flex items-center justify-center md:justify-start">
+          <i class="fas fa-phone-alt text-green-500 mr-2"></i>
+          <span>+ 01 234 567 89</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright section -->
+  <div class="bg-black/5 p-6 text-center">
+    <span>© 2024 Copyright:</span>
+    <a class="font-semibold" href=""> By developer Yassine agurram</a>
+  </div>
+</footer>
+
+
+
+<script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+
+    /* General Styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Banner Container */
+    .banner {
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Left Section */
+    .banner .left {
+      display: flex;
+      align-items: center;
+    }
+
+    .banner .left span {
+      background-color: red;
+      color: white;
+      font-weight: bold;
+      padding: 5px 10px;
+      margin-right: 15px;
+    }
+
+    /* Center Section - Animated Text */
+    .banner .center {
+      flex: 1;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .banner .center span {
+      display: inline-block;
+      white-space: nowrap;
+      animation: slide 10s linear infinite;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(100%);
+      }
+      50% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    /* Right Section */
+    .banner .right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .banner .right .date-box {
+      background-color: white;
+      color: black;
+      padding: 5px 10px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .banner .right .date-box span {
+      background-color: red;
+      color: white;
+      padding: 5px;
+    }
+
+    /* Responsive Design for Phones */
+    @media (max-width: 768px) {
+      .banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+       
+      }
+
+      .banner .left {
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
+      .banner .left span {
+        margin-right: 0;
+      }
+
+      .banner .center {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+      }
+
+      .banner .right {
+        justify-content: center;
+        gap: 5px;
+        display: none;
+      }
+
+      .banner .right .date-box {
+        flex-direction: column;
+        gap: 3px;
+      }
+    }
+
+    /* Smooth infinite scrolling */
+    @keyframes slideRightToLeft {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+
+
+    @media (max-width: 768px) {
+      #dropdown-menu {
+         position: absolute;
+         z-index: 10;
+      }
+    }
+    
+
+
+  

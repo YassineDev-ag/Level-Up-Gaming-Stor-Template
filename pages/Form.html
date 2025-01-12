@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <title>LevelUpStore - Livraison</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    @keyframes slideRapid {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      50% {
+        transform: translateX(100%);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    .animate-slideRapid {
+      animation: slideRapid 1.5s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- Navbar -->
+  <nav class="bg-black border-b-2 border-green-500">
+    <div class="max-w-screen-xl mx-auto grid grid-cols-12 items-center px-4 py-2">
+      <div class="col-span-3 flex items-center space-x-4">
+        <img src="../icon/fi-4.png" alt="Logo" class="h-8 w-auto">
+        <span class="font-bold text-lg hidden md:flex" style="font-family: 'Anton', sans-serif;">Level<span style="color: green;">Up</span>store</span>
+      </div>
+      <div class="col-span-9 flex justify-end space-x-4">
+        <a href="index.html" class="text-green-400 hover:text-green-500">Home</a>
+        <a href="service-client.html" class="text-green-400 hover:text-green-500">Service Client</a>
+        <a href="pages/shop.html" class="text-green-400 hover:text-green-500">Shop</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Livraison Section -->
+  <div class="container mx-auto py-10 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fadeIn" style="font-family: 'Anton', sans-serif;">Livraison <span style="color: green;">24H/48H</span></h1>
+    <p class="text-xl text-green-400 mb-2 animate-fadeIn">Livraison à domicile</p>
+    <p class="text-lg mb-4 animate-fadeIn">Partout au Maroc</p>
+
+    <!-- Animated Paragraph -->
+    <div class="bg-black text-white p-4 md:p-8 mt-6 text-center rounded-md shadow-lg animate-slideRapid">
+      <p class="text-lg md:text-xl">
+        Notre service de livraison rapide garantit que vos produits seront livrés en toute sécurité et dans les délais. 
+        Avec des options de suivi en temps réel et une couverture nationale, nous offrons la meilleure expérience de livraison pour satisfaire nos clients. 🚚✨
+      </p>
+    </div>
+
+    <!-- Icons Section -->
+    <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12 mt-8">
+      <div class="flex flex-col items-center animate-fadeIn">
+        <i class="fas fa-truck text-green-500 text-6xl"></i>
+        <p class="text-lg mt-2">Livraison rapide</p>
+      </div>
+      <div class="flex flex-col items-center animate-fadeIn">
+        <i class="fas fa-map-marker-alt text-green-500 text-6xl"></i>
+        <p class="text-lg mt-2">Disponible partout</p>
+      </div>
+      <div class="flex flex-col items-center animate-fadeIn">
+        <i class="fas fa-clock text-green-500 text-6xl"></i>
+        <p class="text-lg mt-2">Assistance 24/7</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black text-green-500 text-center lg:text-left">
+    <div class="flex items-center justify-center border-b-2 border-green-500 p-6 lg:justify-between">
+      <div class="me-12 hidden lg:block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <div class="flex justify-center">
+        <a href="https://facebook.com" class="me-6">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" class="me-6">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com" class="me-6">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+    <div class="mx-6 py-10 text-center md:text-left">
+      <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <h6 class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">LevelUp-Store</h6>
+          <p>Explore the best gaming gear and accessories with fast delivery options!</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-black/5 p-6 text-center">
+      <span>© 2024 Copyright:</span>
+      <a class="font-semibold" href="">By developer Yassine Agurram</a>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
